@@ -10,12 +10,7 @@
                 <thead>
                 <tr class="uppercase text-xs text-left text-orange-500">
                     <th>#</th>
-                    <th>Short Code</th>
-                    <th>Sku Code</th>
-                    <th>Product Name</th>
-                    <th>QTY</th>
-                    <th>Price</th>
-                    <th>Discount</th>
+                    <th>Product Details</th>
                     <th>Amount</th>
                 </tr>
                 </thead>
@@ -24,15 +19,15 @@
                     <tr class="text-xs">
                         <td class="py-1">{{ ++$index }}</td>
                         <td>{{ $item['short_code'] }}</td>
-                        <td>{{ $item['sku'] }}</td>
                         <td>
-                            {{ $item['product_name'] }}
-                            <br />
+                            <span class="font-bold">Short Code</span> {{ $item['short_code'] }} <br />
+                            <span class="font-bold">SKU</span> {{ $item['sku'] }} <br />
+                            <span class="font-bold">Product Name</span> {{ $item['product_name'] }} <br />
+                            <span class="font-bold">Qty</span> {{ $item['product_name'] }} <br />
+                            <span class="font-bold">Price</span> ₱ {{ number_format((float)$item['price_per_quantity'], 2) }} <br />
+                            <span class="font-bold">Discount</span> ₱{{ number_format((float) $item['discount'], 2) }} <br />
                             <span class="text-xs italic">{{ $item['remarks'] }}</span>
                         </td>
-                        <td>{{ (int)$item['quantity'] }}</td>
-                        <td>₱ {{ number_format((float)$item['price_per_quantity'], 2) }}</td>
-                        <td>₱{{ number_format((float) $item['discount'], 2) }}</td>
                         <td>₱ {{ number_format(((float)$item['quantity'] * (float)$item['price_per_quantity']) - (float)$item['discount']) }}</td>
                     </tr>
                 @endforeach
