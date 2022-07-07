@@ -44,7 +44,7 @@
             <h3 class="font-bold">₱ {{ number_format($total) }}</h3>
         </div>
         <div class="flex items-center justify-center text-center">
-            <a href="{{ $invoice->data['nextpay_link'] }}" class="italic font-bold underline">Please pay thru this link (we also accept paymaya,and bank transfer)</a>
+            <a href="{{ $invoice->data['nextpay_link'] }}" class="italic font-bold underline">Please pay thru this link (GCash, Credit Card, bank transfer, and more are all accepted)</a>
         </div>
     </div>
     {{-- Knowing others is intelligence; knowing yourself is true wisdom. --}}
