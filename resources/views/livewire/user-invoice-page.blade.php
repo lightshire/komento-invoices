@@ -21,15 +21,15 @@
                         <td class="pb-3">
                             <div class="flex items-center gap-4">
                                 <div>
-                                    <span class="font-bold">Product Name</span> {{ $item['product_name'] }} (x{{ $item['quantity'] }})<br />
-                                    <span class="font-bold">SKU</span> {{ $item['sku'] }} <br />
+                                   {{ $item['product_name'] }} (x{{ $item['quantity'] }})<br />
+                                    {{ $item['sku'] }} <br />
                                 </div>
                                 <div>
-                                    <span class="font-bold">Short Code</span> {{ $item['short_code'] }} <br />
-                                    <span class="font-bold">Price</span> ₱ {{ number_format((float)$item['price_per_quantity'], 2) }} <br />
+                                    {{ $item['short_code'] }} <br />
+                                    ₱ {{ number_format((float)$item['price_per_quantity'], 2) }} <br />
                                 </div>
                             </div>
-                            <span class="font-bold">Discount</span> ₱{{ number_format((float) $item['discount'], 2) }} <br />
+                           ₱{{ number_format((float) $item['discount'], 2) }} <br />
                             <span class="text-xs italic">{{ $item['remarks'] }}</span>
                         </td>
                         <td>₱ {{ number_format(((float)$item['quantity'] * (float)$item['price_per_quantity']) - (float)$item['discount']) }}</td>
