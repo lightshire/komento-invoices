@@ -1,4 +1,4 @@
-<div class="w-full h-screen flex items-center justify-center bg-gray-200 p-8 flex-col">
+<div class="w-full h-screen flex items-center justify-center bg-gray-200 p-0 md:p-8 flex-col">
     <img src="/img.png" class="w-48" />
     <div class="w-auto md:w-1/2 bg-white p-4">
         <div class="flex items-center justify-between mb-8 text-orange-500">
