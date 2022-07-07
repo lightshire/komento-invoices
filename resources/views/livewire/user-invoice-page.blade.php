@@ -21,7 +21,7 @@
                         <td class="pb-3">
                             <div class="flex items-center gap-4">
                                 <div>
-                                    <span class="font-bold">Product Name</span> {{ $item['product_name'] }} (x{{ $item['product_name'] }})<br />
+                                    <span class="font-bold">Product Name</span> {{ $item['product_name'] }} (x{{ $item['quantity'] }})<br />
                                     <span class="font-bold">SKU</span> {{ $item['sku'] }} <br />
                                 </div>
                                 <div>
