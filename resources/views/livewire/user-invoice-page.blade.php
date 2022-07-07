@@ -18,8 +18,7 @@
                 @foreach($invoice->data['items']  as $index => $item)
                     <tr class="text-xs">
                         <td class="py-1">{{ ++$index }}</td>
-                        <td>{{ $item['short_code'] }}</td>
-                        <td>
+                        <td class="pb-3">
                             <span class="font-bold">Short Code</span> {{ $item['short_code'] }} <br />
                             <span class="font-bold">SKU</span> {{ $item['sku'] }} <br />
                             <span class="font-bold">Product Name</span> {{ $item['product_name'] }} <br />
