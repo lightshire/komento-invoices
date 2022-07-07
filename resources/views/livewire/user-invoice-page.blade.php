@@ -19,13 +19,13 @@
                     <tr class="text-xs">
                         <td class="py-1">{{ ++$index }}</td>
                         <td class="pb-3">
-                            <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-4">
                                 <div>
-                                    <span class="font-bold">Short Code</span> {{ $item['short_code'] }} <br />
+                                    <span class="font-bold">Product Name</span> {{ $item['product_name'] }} (x{{ $item['product_name'] }})<br />
                                     <span class="font-bold">SKU</span> {{ $item['sku'] }} <br />
                                 </div>
                                 <div>
-                                    <span class="font-bold">Product Name</span> {{ $item['product_name'] }} (x{{ $item['product_name'] }})<br />
+                                    <span class="font-bold">Short Code</span> {{ $item['short_code'] }} <br />
                                     <span class="font-bold">Price</span> ₱ {{ number_format((float)$item['price_per_quantity'], 2) }} <br />
                                 </div>
                             </div>
