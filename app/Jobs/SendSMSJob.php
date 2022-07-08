@@ -55,7 +55,7 @@ class SendSMSJob implements ShouldQueue
             'uuid' => \Illuminate\Support\Str::uuid()
         ]);
 
-        $message = 'Hey ' . $this->order['name'] . '! Thank you for mining in Komento. To view your invoice please click the link below and follow the payment process. Thank you! https://komento.inspiredropshipping.com/invoice/' . $order->uuid;
+        $message = 'Hey ' . $this->order['name'] . '! Thanks for mining with Komento! To view and pay your invoice, please click the link below. Once paid, please send your proof of payment to our facebook page! See you soon!  https://komento.inspiredropshipping.com/invoice/' . $order->uuid;
 
         $message = new Message($order->key, $message);
         $sender->send($message);
